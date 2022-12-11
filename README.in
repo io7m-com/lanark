@@ -122,7 +122,7 @@ packages by using carefully crafted names. For example:
   `com.io7m.example`
   `com.iọ7m.example`
 
-The second package names a malicious package. It would be fairly trivial for
+The second package is a malicious package. It would be fairly trivial for
 someone to sneak in a reference to this package as a dependency in an open
 source project and have it go unnoticed. For those unable to tell the
 difference: The `o` in `io7m` in the second package is actually `U+1ECC`
