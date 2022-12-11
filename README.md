@@ -15,6 +15,9 @@ lanark
 | OpenJDK (Temurin) LTS     | Windows  | [![Build (OpenJDK (Temurin) LTS,     Windows)](https://img.shields.io/github/workflow/status/io7m/lanark/main.windows.temurin.lts)](https://github.com/io7m/lanark/actions?query=workflow%3Amain.windows.temurin.lts)         |
 
 
+## Lanark
+
+A specification for restricted dotted names.
 
 ## Motivation
 
