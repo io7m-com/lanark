@@ -77,7 +77,7 @@ _secondary segment_) is removed.
 
 #### Theorem SIZE
 
-The number of characters in any _dotted name_ is <= 1024.
+The number of characters in any _dotted name_ is `<= 1024`.
 
 #### Proof
 
