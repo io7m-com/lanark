@@ -19,6 +19,7 @@ Require Import Coq.Strings.String.
 Require Import Coq.Strings.Ascii.
 Require Import Coq.Arith.Peano_dec.
 Require Import Coq.Arith.Arith_base.
+Require Import Coq.Logic.ProofIrrelevance.
 
 Import ListNotations.
 
@@ -168,6 +169,75 @@ Proof.
   destruct (validSegmentPrimaryDecidable (namePrimary n)); intuition.
   destruct (nameValidSegmentSecondaryForall_dec (nameSecondary n)); intuition.
   destruct (validNameLength15_dec (nameSecondary n)); intuition.
+Qed.
+
+(** Equality of names is decidable. *)
+Theorem segmentPrimaryDec : forall (a b : segmentPrimary),
+  {a = b}+{a <> b}.
+Proof.
+  intros a b.
+  destruct a as [a0 a1].
+  destruct b as [b0 b1].
+  destruct (ascii_dec a0 b0) as [H0|H1]. {
+    destruct (list_eq_dec ascii_dec a1 b1) as [H2|H3]. {
+      subst b0.
+      subst b1.
+      left; reflexivity.
+    } {
+      subst b0.
+      right.
+      congruence.
+    }
+  } {
+    right.
+    congruence.
+  }
+Qed.
+
+(** Equality of names is decidable. *)
+Theorem segmentSecondaryDec : forall (a b : segmentSecondary),
+  {a = b}+{a <> b}.
+Proof.
+  intros a b.
+  destruct a as [a0 a1].
+  destruct b as [b0 b1].
+  destruct (ascii_dec a0 b0) as [H0|H1]. {
+    destruct (list_eq_dec ascii_dec a1 b1) as [H2|H3]. {
+      subst b0.
+      subst b1.
+      left; reflexivity.
+    } {
+      subst b0.
+      right.
+      congruence.
+    }
+  } {
+    right.
+    congruence.
+  }
+Qed.
+
+(** Equality of names is decidable. *)
+Theorem nameDec : forall (a b : name),
+  {a = b}+{a <> b}.
+Proof.
+  intros a b.
+  destruct a as [a0 a1].
+  destruct b as [b0 b1].
+  destruct (segmentPrimaryDec a0 b0) as [H0|H1]. {
+    destruct (list_eq_dec segmentSecondaryDec a1 b1) as [H2|H3]. {
+      subst b0.
+      subst b1.
+      left; reflexivity.
+    } {
+      subst b0.
+      right.
+      congruence.
+    }
+  } {
+    right.
+    congruence.
+  }
 Qed.
 
 (** The class of objects that can be turned into strings. *)
