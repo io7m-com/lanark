@@ -116,6 +116,11 @@ We can therefore conclude that a string consisting of a maximum length
 _primary segment_ and the maximum number of maximum length
 _secondary segments_ is `64 + (15 * 64) = 1024`.
 
+#### Coq
+
+Machine-checked proofs of the above propositions are provided in the
+[Lanark.v](Lanark.v) file.
+
 ## Rationale
 
 _Why are names defined in terms of a regular expression rather than as a BNF
