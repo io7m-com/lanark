@@ -7,13 +7,12 @@ lanark
 
 ![lanark](./src/site/resources/lanark.jpg?raw=true)
 
-| JVM                       | Platform | Status |
-|---------------------------|----------|--------|
-| OpenJDK (Temurin) Current | Linux    | [![Build (OpenJDK (Temurin) Current,   Linux)](https://img.shields.io/github/workflow/status/io7m/lanark/main.linux.temurin.current)](https://github.com/io7m/lanark/actions?query=workflow%3Amain.linux.temurin.current)     |
-| OpenJDK (Temurin) Current | Windows  | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/workflow/status/io7m/lanark/main.windows.temurin.current)](https://github.com/io7m/lanark/actions?query=workflow%3Amain.windows.temurin.current) |
-| OpenJDK (Temurin) LTS     | Linux    | [![Build (OpenJDK (Temurin) LTS,       Linux)](https://img.shields.io/github/workflow/status/io7m/lanark/main.linux.temurin.lts)](https://github.com/io7m/lanark/actions?query=workflow%3Amain.linux.temurin.lts)             |
-| OpenJDK (Temurin) LTS     | Windows  | [![Build (OpenJDK (Temurin) LTS,     Windows)](https://img.shields.io/github/workflow/status/io7m/lanark/main.windows.temurin.lts)](https://github.com/io7m/lanark/actions?query=workflow%3Amain.windows.temurin.lts)         |
-
+| JVM | Platform | Status |
+|-----|----------|--------|
+| OpenJDK (Temurin) Current | Linux | [![Build (OpenJDK (Temurin) Current, Linux)](https://img.shields.io/github/actions/workflow/status/io7m/lanark/main.linux.temurin.current.yml)](https://github.com/io7m/lanark/actions?query=workflow%3Amain.linux.temurin.current)|
+| OpenJDK (Temurin) LTS | Linux | [![Build (OpenJDK (Temurin) LTS, Linux)](https://img.shields.io/github/actions/workflow/status/io7m/lanark/main.linux.temurin.lts.yml)](https://github.com/io7m/lanark/actions?query=workflow%3Amain.linux.temurin.lts)|
+| OpenJDK (Temurin) Current | Windows | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/actions/workflow/status/io7m/lanark/main.windows.temurin.current.yml)](https://github.com/io7m/lanark/actions?query=workflow%3Amain.windows.temurin.current)|
+| OpenJDK (Temurin) LTS | Windows | [![Build (OpenJDK (Temurin) LTS, Windows)](https://img.shields.io/github/actions/workflow/status/io7m/lanark/main.windows.temurin.lts.yml)](https://github.com/io7m/lanark/actions?query=workflow%3Amain.windows.temurin.lts)|
 
 ## Lanark
 
@@ -116,6 +115,11 @@ that can be used for _secondary segments_ is `15 * 64 = 960`.
 We can therefore conclude that a string consisting of a maximum length
 _primary segment_ and the maximum number of maximum length
 _secondary segments_ is `64 + (15 * 64) = 1024`.
+
+#### Coq
+
+Machine-checked proofs of the above propositions are provided in the
+[Lanark.v](com.io7m.lanark.core/src/main/resources/com/io7m/lanark/core/Lanark.v) file.
 
 ## Rationale
 
