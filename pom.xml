@@ -28,8 +28,8 @@
 
   <properties>
     <io7m.api.previousVersion>1.1.0</io7m.api.previousVersion>
-    <jqwik.version>1.7.3</jqwik.version>
-    <junit.version>5.9.3</junit.version>
+    <jqwik.version>1.8.2</jqwik.version>
+    <junit.version>5.10.1</junit.version>
   </properties>
 
   <licenses>
