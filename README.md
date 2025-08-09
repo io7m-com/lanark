@@ -53,7 +53,7 @@ A _dotted name_ can always be split into between 1 and 16 _segments_
 by splitting the name into separate parts at each dot, such that each part is
 a valid _dotted name_ .
 
-#### Proof
+#### Proof SPLIT
 
 Let `x` be a _dotted name_. By the definition of the
 [regular expression](#regular-expression) that defines a dotted name, `x`
@@ -95,7 +95,7 @@ _secondary segment_) is removed.
 
 The number of characters in any _dotted name_ is `<= 1024`.
 
-#### Proof
+#### Proof SIZE
 
 By [SPLIT](#theorem-split), we know that a dotted name `x` consists of
 a _primary segment_ followed by up to `15` _secondary segments_.
